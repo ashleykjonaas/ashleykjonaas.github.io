@@ -1,21 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang=en>
+<meta charset="UTF-8">
 <head>
 <title>Ashley Kjonaas</title>
 <style>
-	body
-	{
+body{
 	background:#303030;
 	color:white;
 	font-family:Trebuchet MS;
 	text-align:center
 	}
+.onoffswitch{
+	position: relative; width: 102px;
+	-webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+	}
+.onoffswitch-checkbox{
+	display: none;
+	}
+.onoffswitch-label{
+	display: block; overflow: hidden; cursor: pointer;
+	border: 0; border-radius: 16px;
+	}
+.onoffswitch-inner{
+	display: block; width: 200%; margin-left: -100%;
+	transition: margin 0.3s ease-in 0s;
+	}
+.onoffswitch-inner:before, .onoffswitch-inner:after{
+	display: block; float: left; width: 50%; height: 45px; padding: 0; line-height: 45px;
+	font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+	box-sizing: border-box;
+	}
+.onoffswitch-inner:before{
+	content: "EN";
+	padding-left: 10px;
+	background-color: #FF9494; color: #FFFFFF;
+	}
+.onoffswitch-inner:after{
+	content: "FR";
+	padding-right: 10px;
+	background-color: #78E9FF; color: #FFFFFF;
+	text-align: right;
+	}
+.onoffswitch-switch{
+	display: block; width: 17px; margin: 14px;
+	background: #FFFFFF;
+	position: absolute; top: 0; bottom: 0;
+	right: 53px;
+	border: 0; border-radius: 16px;
+	transition: all 0.3s ease-in 0s; 
+	}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner{
+	margin-left: 0;
+	}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch{
+	right: 0px; 
+	}
 </style>
+</head>
 <body>
+	<div class="onoffswitch">
+	<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+	<label class="onoffswitch-label" for="myonoffswitch">
+		<span class="onoffswitch-inner"></span>
+		<span class="onoffswitch-switch"></span>
+	</label>
+	</div>
 <h1>Welcome!</h1>
 <p>I started this repository July 28, 2018. I plan to eventually use this page as a sandbox to build my own website from scratch. On it, I would like to write code to install my trip cost calculator, currently sitting on my desktop in Excel format. With some effort, I am sure I can make it into a more robust tool that can scrape websites like GasBuddy and Google Maps to run calculations based off locations rather than various manual inputs (distance, $/L or $/gal, exchange rate).
 </p>
 <p>In the meantime, I invite you to consult <a href="https://ashleykjonaas.site123.me/">my prebuilt website</a>.
+</p>
+<h1>Bienvenue!
+</h1>
+<p>J'ai commencé ce répertoire le 28 juillet 2018. J'envisage de me servir de cette page blanche (OK, OK, gris ardoise...) en tant que bac à sable pour créer une site web qui me réprésente. Ici, j'aimerais m'apprendre du code par moi-même pour éventuellement pouvoir y installer ma calculatrice de voyage, qui ne sert qu'à moi sur mon bureau. Actuellement, elle prend seuelement des données manuelles (distance, $/L ou $/gal, taux d'échange). Avec un peu d'effort, j'ai confiance que je peux la réaménager en outil plus robuste—et surtout plus simple—qui collecte des données depuis des sites tels que GasBuddy et Google Maps pour calculer à partir d'endroits.
+</p>
+<p>En attendant, je vous invite à regarder <a href="https://ashleykjonaas.site123.me/">mon site pré-construit</a>.
 </p>
 </body>
 </html>
