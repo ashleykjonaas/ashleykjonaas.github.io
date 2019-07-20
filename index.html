@@ -1,6 +1,5 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-<html lang=en>
 <meta charset="UTF-8">
 <head>
 <title>Ashley Kjonaas</title>
@@ -8,17 +7,17 @@
 <style>
 body{
   background:#303030;
-  color:white;
-  font-family:Trebuchet MS;
-  text-align:center
+  color:#fff;
+  font-family:Trebuchet MS
   }
+/* ICONS */
 .icon-bar {
   position: absolute;
   bottom:0;
   right:0;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  transform: translateY(-50%)
   }
 .icon-bar a {
   display: inline;
@@ -26,63 +25,89 @@ body{
   padding: 12px;
   transition: all 0.3s ease;
   color: white;
-  font-size: 16px;
+  font-size: 16px
   }
 .icon-bar a:hover {
   background-color: white;
-  color: black;
+  color: black
   }
-.github {background: #24292E;color: white;}
-.lastfm {background: #B90000;color: white;}
-.linkedin {background: #007bb5;color: white;}
-.email {background: #dd4b39;color: white;}
-.twitter {background: #55ACEE;color: white;}
-
+.github {background: #24292E;color:#fff}
+.lastfm {background: #B90000;color:#fff}
+.linkedin {background: #007bb5;color:#fff}
+.email {background: #dd4b39;color:#fff}
+.twitter {background: #55ACEE;color:#fff}
+.goodreads {background: #f4f1ea;color:#382110!important}
+/* TABS*/
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html,body{height:100vh}
+body{align-items:center;padding:40px;font:14px}
+p:not(:last-child) {margin: 0 0 20px}
+main {
+  padding: 40px;
+  border: 1px solid rgba(0,0,0,.2);
+  background: #303030;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1)
+  }
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #aaa
+  }
+input {display: none}
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #777;
+  border: 1px solid transparent
+  }
+label:before {margin-right:10px}
+label[for*='1']:before{content:"🇨🇦"}
+label[for*='2']:before{content:"🇫🇷"}
+label:hover {
+  color: #fff;
+  cursor: pointer
+  }
+input:checked + label {
+  color: #61B4FA;
+  border: 1px solid #aaa;
+  border-top: 2px solid #61B4FA;
+  border-bottom: 1px solid #303030
+  }
+#tab1:checked ~ #content1,#tab2:checked ~ #content2{display: block}
+@media screen and (max-width: 800px) {
+  label {font-size: 0}
+  label:before {
+    margin: 0;
+    font-size: 18px
+  }
+@media screen and (max-width: 500px) {label {padding: 15px}}}
 </style>
 </head>
 <body>
-
-<div class="icon-bar">
-  <a href="https://www.linkedin.com/in/ashleykjonaas/" class="linkedin"><i class="fa fa-linkedin"></i></a>
-  <a href="mailto:ashley.kjonaas@gmail.com" class="email"><i class="fa fa-envelope"></i></a>
-  <a href="https://twitter.com/AshleyKjonaas" class="twitter"><i class="fa fa-twitter"></i></a>
-  <a href="https://last.fm/user/Ashlou" class="lastfm"><i class="fa fa-lastfm"></i></a>
-  <a href="https://github.com/ashleykjonaas" class="github"><i class="fa fa-github"></i></a>
-</div>
-
-<div class="content"><button onclick="myFunction()">english/anglais</button>
-
-<div id="myDIV">
-<h1>Welcome!</h1><p>I started this repository July 28, 2018. I plan to eventually use this page as a sandbox to build my own website from scratch. On it, I would like to write code to install my trip cost calculator, currently sitting on my desktop in Excel format. With some effort, I am sure I can make it into a more robust tool that can scrape websites like GasBuddy and Google Maps to run calculations based off locations rather than various manual inputs (distance, $/L or $/gal, exchange rate).</p><p>In the meantime, I invite you to consult <a href="https://ashleykjonaas.site123.me/">my prebuilt website</a>.</p>
-</div>
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  }
-</script>
-
-<button onclick="myFunction2()">français/french</button>
-
-<div id="myDIV2">
-<h1>Bienvenue!</h1><p>J'ai commencé ce répertoire le 28 juillet 2018. J'envisage de me servir de cette page blanche (OK, OK, gris ardoise...) en tant que bac à sable pour créer une site web qui me réprésente. Ici, j'aimerais apprendre du codage par moi-même pour éventuellement pouvoir y installer ma calculatrice de voyage, qui ne sert qu'à moi sur mon bureau. Actuellement, elle prend seuelement des données manuelles (distance, $/L ou $/gal, taux d'échange). Avec un peu d'effort, j'ai confiance que je peux la réaménager en outil plus robuste—et surtout plus simple—qui collecte des données depuis des sites tels que GasBuddy et Google Maps pour calculer à partir d'une ville en particulier.</p><p>En attendant, je vous invite à regarder <a href="https://ashleykjonaas.site123.me/">mon site pré-construit</a>.</p>
-</div></div>
-
-<script>
-function myFunction2() {
-  var x = document.getElementById("myDIV2");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  }
-</script>
-
+  <div class="icon-bar">
+    <a href="https://www.linkedin.com/in/ashleykjonaas/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    <a href="mailto:ashley.kjonaas@gmail.com" class="email"><i class="fa fa-envelope"></i></a>
+    <a href="https://twitter.com/AshleyKjonaas" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.goodreads.com/user/show/5693767-ashley" class="goodreads"><i class="fa fa-book"></i></a>
+    <a href="https://last.fm/user/Ashlou" class="lastfm"><i class="fa fa-lastfm"></i></a>
+    <a href="https://github.com/ashleykjonaas" class="github"><i class="fa fa-github"></i></a>
+  </div>
+  <main>
+    <input id="tab1" type="radio" name="tabs" checked>
+    <label for="tab1">english</label>
+    <input id="tab2" type="radio" name="tabs">
+    <label for="tab2">français</label>
+  <section id="content1">
+    <h1>Welcome!</h1>
+    <p>I started this repository July 28, 2018. I plan to eventually use this page as a sandbox to build my own website from scratch. On it, I would like to write code to install my trip cost calculator, currently sitting on my desktop in Excel format. With some effort, I am sure I can make it into a more robust tool that can scrape websites like GasBuddy and Google Maps to run calculations based off locations rather than various manual inputs (distance, $/L or $/gal, exchange rate).</p><p>In the meantime, I invite you to consult <a href="https://ashleykjonaas.site123.me/">my prebuilt website</a>.</p>
+  </section>
+  <section id="content2">
+    <h1>Bienvenue!</h1>
+    <p>J'ai commencé ce répertoire le 28 juillet 2018. J'envisage de me servir de cette page blanche (OK, OK, gris ardoise...) en tant que bac à sable pour créer une site web qui me réprésente. Ici, j'aimerais apprendre du codage par moi-même pour éventuellement pouvoir y installer ma calculatrice de voyage, qui ne sert qu'à moi sur mon bureau. Actuellement, elle prend seuelement des données manuelles (distance, $/L ou $/gal, taux d'échange). Avec un peu d'effort, j'ai confiance que je peux la réaménager en outil plus robuste—et surtout plus simple—qui collecte des données depuis des sites tels que GasBuddy et Google Maps pour calculer à partir d'une ville en particulier.</p><p>En attendant, je vous invite à regarder <a href="https://ashleykjonaas.site123.me/">mon site pré-construit</a>.</p>
+    </section>
+  </main>
 </body>
 </html>
